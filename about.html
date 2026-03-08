@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="About aconnectivity — The conceptual home of the Intelligent Connectivity era. A strategic digital asset at the convergence of AI, telecommunications, and 6G.">
+<meta name="robots" content="index, follow">
+<title>About — aconnectivity</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+<style>
+  :root { --ink: #0C0C0E; --paper: #F5F2ED; --accent: #1A1A2E; --silver: #8E9AAF; --gold: #B8965A; --light: #EAE6DF; --white: #FAFAF8; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--white); color: var(--ink); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 18px; line-height: 1.7; overflow-x: hidden; cursor: none; }
+  .cursor { width: 8px; height: 8px; background: var(--ink); border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; transform: translate(-50%, -50%); }
+  .cursor-ring { width: 32px; height: 32px; border: 1px solid var(--ink); border-radius: 50%; position: fixed; pointer-events: none; z-index: 9998; transition: transform 0.4s ease; transform: translate(-50%, -50%); opacity: 0.4; }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 28px 60px; display: flex; justify-content: space-between; align-items: center; background: rgba(250,250,248,0.94); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.06); }
+  .nav-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 15px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink); text-decoration: none; }
+  .nav-logo span { color: var(--silver); }
+  .nav-links { display: flex; gap: 44px; }
+  .nav-links a { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--silver); text-decoration: none; transition: color 0.2s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--ink); }
+
+  .about-hero { padding: 160px 60px 100px; background: var(--paper); border-bottom: 1px solid var(--light); }
+  .ah-eyebrow { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 40px; }
+  .ah-title { font-family: 'Syne', sans-serif; font-size: clamp(48px, 8vw, 96px); font-weight: 800; line-height: 0.95; letter-spacing: -0.03em; color: var(--ink); margin-bottom: 60px; }
+  .ah-intro { font-size: clamp(20px, 2.5vw, 28px); font-weight: 300; font-style: italic; color: var(--accent); max-width: 700px; line-height: 1.5; }
+
+  .about-body { max-width: 900px; margin: 0 auto; padding: 100px 60px; }
+
+  .about-section { margin-bottom: 80px; padding-bottom: 80px; border-bottom: 1px solid var(--light); }
+  .about-section:last-child { border-bottom: none; }
+
+  .as-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 36px; }
+  .as-title { font-family: 'Syne', sans-serif; font-size: clamp(28px, 4vw, 44px); font-weight: 700; letter-spacing: -0.02em; color: var(--ink); margin-bottom: 32px; line-height: 1.1; }
+  .as-body p { font-size: 18px; font-weight: 300; color: #3A3A3A; line-height: 1.85; margin-bottom: 24px; }
+
+  .values-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 48px; }
+  .value-item { padding: 40px; background: var(--paper); border: 1px solid var(--light); }
+  .vi-num { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--gold); letter-spacing: 0.14em; margin-bottom: 16px; }
+  .vi-title { font-family: 'Syne', sans-serif; font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--ink); margin-bottom: 12px; }
+  .vi-text { font-size: 15px; font-weight: 300; color: var(--silver); line-height: 1.6; }
+
+  .statement-block { padding: 60px; background: var(--ink); color: var(--paper); margin: 80px 0; }
+  .sb-text { font-family: 'Cormorant Garamond', serif; font-size: clamp(22px, 3vw, 32px); font-weight: 300; font-style: italic; line-height: 1.4; color: var(--paper); }
+
+  footer { background: var(--ink); color: var(--paper); padding: 48px 60px; }
+  .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+  .footer-brand { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 16px; color: var(--paper); }
+  .footer-brand span { color: rgba(255,255,255,0.25); }
+  .footer-nav { display: flex; gap: 32px; }
+  .footer-nav a { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--silver); text-decoration: none; transition: color 0.2s; }
+  .footer-nav a:hover { color: var(--paper); }
+
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  @media (max-width: 768px) {
+    nav { padding: 24px; }
+    .nav-links { gap: 20px; }
+    .about-hero { padding: 120px 24px 60px; }
+    .about-body { padding: 60px 24px; }
+    .values-grid { grid-template-columns: 1fr; }
+    .statement-block { padding: 40px 24px; }
+    footer { padding: 40px 24px; }
+    body { cursor: auto; }
+    .cursor, .cursor-ring { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">aconnectivity<span>.com</span></a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="manifesto.html">Manifesto</a>
+    <a href="about.html" class="active">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<header class="about-hero">
+  <p class="ah-eyebrow">About</p>
+  <h1 class="ah-title">What Is<br>aconnectivity?</h1>
+  <p class="ah-intro">Not a product. Not a company. Not a protocol. A paradigm — and the strategic digital asset that names it.</p>
+</header>
+
+<div class="about-body">
+
+  <div class="about-section reveal">
+    <p class="as-label">The Concept</p>
+    <h2 class="as-title">A Name for an Era</h2>
+    <div class="as-body">
+      <p>aconnectivity is the conceptual home of the Intelligent Connectivity era — the age in which AI, telecommunications infrastructure, and the architecture of 6G converge into a single, transformative paradigm.</p>
+      <p>Every great technological era has its foundational name. The word that frames the thinking of an entire generation of builders, investors, and innovators. aconnectivity is that name for the era now unfolding.</p>
+      <p>It is not named after a company. It is not a brand created for marketing purposes. It is a natural evolution of language responding to a genuine conceptual need — the need to name what happens when intelligence and connectivity become inseparable.</p>
+    </div>
+  </div>
+
+  <div class="statement-block reveal">
+    <p class="sb-text">"The Internet connected the world. aconnectivity will connect its intelligence."</p>
+  </div>
+
+  <div class="about-section reveal">
+    <p class="as-label">The Asset</p>
+    <h2 class="as-title">A Strategic Digital Asset at the Convergence</h2>
+    <div class="as-body">
+      <p>aconnectivity.com sits at the precise intersection of three of the largest and fastest-growing markets in the global economy: telecommunications ($2.5 trillion), Cloud AI (growing at 39% annually), and the emerging 6G infrastructure sector.</p>
+      <p>It is a domain name. But more than that, it is a conceptual asset — the deed to a piece of the future's vocabulary. The company that ultimately inhabits this name will not simply acquire a URL. It will acquire the authority to define an era.</p>
+    </div>
+  </div>
+
+  <div class="about-section reveal">
+    <p class="as-label">The Principles</p>
+    <h2 class="as-title">What aconnectivity Stands For</h2>
+    <div class="values-grid">
+      <div class="value-item">
+        <p class="vi-num">01</p>
+        <p class="vi-title">Intelligence Over Speed</p>
+        <p class="vi-text">Connectivity is judged not by its bandwidth, but by its comprehension. A network that transmits without understanding falls short of its potential.</p>
+      </div>
+      <div class="value-item">
+        <p class="vi-num">02</p>
+        <p class="vi-title">Trust as Architecture</p>
+        <p class="vi-text">Security and privacy are not features. They are the foundation. Any intelligent network that cannot be trusted is not an advancement — it is a threat.</p>
+      </div>
+      <div class="value-item">
+        <p class="vi-num">03</p>
+        <p class="vi-title">The Human Remains Central</p>
+        <p class="vi-text">Intelligent connectivity amplifies human judgment. It does not replace it. The measure of success is human flourishing — not machine autonomy.</p>
+      </div>
+      <div class="value-item">
+        <p class="vi-num">04</p>
+        <p class="vi-title">Connection Is Always a Choice</p>
+        <p class="vi-text">The right to disconnect must be actively protected. A network that cannot be left is not a network. It is a cage.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <p class="footer-brand">aconnectivity<span>.com</span></p>
+    <nav class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="manifesto.html">Manifesto</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  const cursor = document.getElementById('cursor');
+  const ring = document.getElementById('cursorRing');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+  function animateCursor() {
+    cursor.style.left = mx + 'px'; cursor.style.top = my + 'px';
+    rx += (mx - rx) * 0.12; ry += (my - ry) * 0.12;
+    ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
+    requestAnimationFrame(animateCursor);
+  }
+  animateCursor();
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(e => e.forEach(el => { if (el.isIntersecting) el.target.classList.add('visible'); }), { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

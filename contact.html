@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Contact aconnectivity — Inquiries regarding this strategic digital asset are welcome from organizations with a genuine vision for the Intelligent Connectivity era.">
+<meta name="robots" content="index, follow">
+<title>Contact — aconnectivity</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+<style>
+  :root { --ink: #0C0C0E; --paper: #F5F2ED; --accent: #1A1A2E; --silver: #8E9AAF; --gold: #B8965A; --light: #EAE6DF; --white: #FAFAF8; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--white); color: var(--ink); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 18px; line-height: 1.7; overflow-x: hidden; cursor: none; min-height: 100vh; display: flex; flex-direction: column; }
+  .cursor { width: 8px; height: 8px; background: var(--ink); border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; transform: translate(-50%, -50%); }
+  .cursor-ring { width: 32px; height: 32px; border: 1px solid var(--ink); border-radius: 50%; position: fixed; pointer-events: none; z-index: 9998; transition: transform 0.4s ease; transform: translate(-50%, -50%); opacity: 0.4; }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 28px 60px; display: flex; justify-content: space-between; align-items: center; background: rgba(250,250,248,0.94); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.06); }
+  .nav-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 15px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink); text-decoration: none; }
+  .nav-logo span { color: var(--silver); }
+  .nav-links { display: flex; gap: 44px; }
+  .nav-links a { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--silver); text-decoration: none; transition: color 0.2s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--ink); }
+
+  main { flex: 1; display: grid; grid-template-columns: 1fr 1fr; min-height: calc(100vh - 97px); margin-top: 97px; }
+
+  .contact-left {
+    background: var(--ink); color: var(--paper);
+    padding: 100px 80px;
+    display: flex; flex-direction: column; justify-content: center;
+    position: relative; overflow: hidden;
+  }
+  .contact-left::before {
+    content: 'A';
+    position: absolute; right: -60px; bottom: -100px;
+    font-family: 'Syne', sans-serif; font-size: 400px; font-weight: 800;
+    color: rgba(255,255,255,0.03); line-height: 1; pointer-events: none;
+  }
+  .cl-eyebrow { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 40px; }
+  .cl-title { font-family: 'Syne', sans-serif; font-size: clamp(36px, 5vw, 60px); font-weight: 800; line-height: 1.0; letter-spacing: -0.03em; margin-bottom: 40px; }
+  .cl-text { font-size: 17px; font-weight: 300; color: rgba(245,242,237,0.55); line-height: 1.7; max-width: 440px; margin-bottom: 60px; }
+  .cl-statement { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-style: italic; font-weight: 300; color: rgba(245,242,237,0.7); border-left: 2px solid var(--gold); padding-left: 28px; line-height: 1.5; }
+
+  .contact-right { background: var(--white); padding: 100px 80px; display: flex; flex-direction: column; justify-content: center; }
+
+  .cr-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--silver); margin-bottom: 48px; }
+
+  .form-group { margin-bottom: 36px; }
+  .form-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--silver); display: block; margin-bottom: 12px; }
+  .form-input, .form-select, .form-textarea {
+    width: 100%;
+    background: transparent;
+    border: none; border-bottom: 1px solid var(--light);
+    padding: 12px 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px; font-weight: 300;
+    color: var(--ink);
+    outline: none;
+    transition: border-color 0.2s;
+    cursor: none;
+    -webkit-appearance: none;
+  }
+  .form-input:focus, .form-select:focus, .form-textarea:focus { border-bottom-color: var(--ink); }
+  .form-textarea { resize: none; height: 100px; line-height: 1.6; }
+  .form-select { background: transparent; }
+  .form-select option { background: var(--white); color: var(--ink); }
+
+  .form-submit {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-family: 'DM Mono', monospace; font-size: 11px;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--paper); background: var(--ink);
+    padding: 20px 40px; border: none;
+    cursor: none; transition: background 0.2s, transform 0.2s;
+    margin-top: 16px; width: 100%; justify-content: center;
+  }
+  .form-submit:hover { background: var(--accent); transform: translateY(-1px); }
+  .form-submit .arrow { transition: transform 0.2s; }
+  .form-submit:hover .arrow { transform: translateX(4px); }
+
+  .success-msg { display: none; text-align: center; padding: 40px; background: var(--paper); border: 1px solid var(--light); }
+  .success-msg.show { display: block; }
+  .success-title { font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 700; color: var(--ink); margin-bottom: 12px; }
+  .success-text { font-size: 16px; font-weight: 300; color: var(--silver); }
+
+  footer { background: var(--ink); color: var(--paper); padding: 48px 60px; }
+  .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+  .footer-brand { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 16px; color: var(--paper); }
+  .footer-brand span { color: rgba(255,255,255,0.25); }
+  .footer-nav { display: flex; gap: 32px; }
+  .footer-nav a { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--silver); text-decoration: none; transition: color 0.2s; }
+  .footer-nav a:hover { color: var(--paper); }
+
+  @media (max-width: 900px) {
+    main { grid-template-columns: 1fr; }
+    .contact-left { padding: 80px 24px 60px; }
+    .contact-right { padding: 60px 24px 80px; }
+    nav { padding: 24px; }
+    .nav-links { gap: 20px; }
+    footer { padding: 40px 24px; }
+    body { cursor: auto; }
+    .cursor, .cursor-ring { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">aconnectivity<span>.com</span></a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="manifesto.html">Manifesto</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" class="active">Contact</a>
+  </div>
+</nav>
+
+<main>
+  <div class="contact-left">
+    <p class="cl-eyebrow">Inquiries</p>
+    <h1 class="cl-title">Begin the<br>Conversation</h1>
+    <p class="cl-text">Inquiries regarding this strategic digital asset are welcome from organizations with a genuine vision for the Intelligent Connectivity era. Every serious inquiry receives a considered response.</p>
+    <p class="cl-statement">"The right owner does not search for this asset. This asset finds the right owner."</p>
+  </div>
+
+  <div class="contact-right">
+    <p class="cr-label">Inquiry Form</p>
+    <form id="contactForm">
+      <div class="form-group">
+        <label class="form-label" for="name">Full Name</label>
+        <input class="form-input" type="text" id="name" name="name" required autocomplete="name">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="org">Organization</label>
+        <input class="form-input" type="text" id="org" name="org" autocomplete="organization">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="email">Email Address</label>
+        <input class="form-input" type="email" id="email" name="email" required autocomplete="email">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="nature">Nature of Inquiry</label>
+        <select class="form-select" id="nature" name="nature">
+          <option value="">Select one</option>
+          <option value="acquisition">Asset Acquisition</option>
+          <option value="partnership">Strategic Partnership</option>
+          <option value="licensing">Licensing Inquiry</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="message">Your Vision</label>
+        <textarea class="form-textarea" id="message" name="message" placeholder="Tell us about your vision for this asset..."></textarea>
+      </div>
+      <button type="submit" class="form-submit">
+        Send Inquiry <span class="arrow">→</span>
+      </button>
+    </form>
+    <div class="success-msg" id="successMsg">
+      <p class="success-title">Inquiry Received</p>
+      <p class="success-text">Thank you. Every serious inquiry receives a considered response.</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <p class="footer-brand">aconnectivity<span>.com</span></p>
+    <nav class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="manifesto.html">Manifesto</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  const cursor = document.getElementById('cursor');
+  const ring = document.getElementById('cursorRing');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+  function animateCursor() {
+    cursor.style.left = mx + 'px'; cursor.style.top = my + 'px';
+    rx += (mx - rx) * 0.12; ry += (my - ry) * 0.12;
+    ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
+    requestAnimationFrame(animateCursor);
+  }
+  animateCursor();
+
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    this.style.display = 'none';
+    document.getElementById('successMsg').classList.add('show');
+  });
+</script>
+</body>
+</html>
